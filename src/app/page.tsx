@@ -16,7 +16,7 @@ export default function Home() {
     });
 
     mediaRecorder.ondataavailable{
-      console.log("data available")
+      console.log("data available");
     }
 
   useEffect(() => {
