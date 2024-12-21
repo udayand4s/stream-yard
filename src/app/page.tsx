@@ -5,19 +5,18 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const [stream, setStream] = useState<MediaStream | null>(null);
-  const 
+  
 
   const startRecording = () => {
     if (!stream) return;
     const mediaRecorder = new MediaRecorder(stream,{
       audioBitsPerSecond: 128000,
       videoBitsPerSecond: 2500000,
-      framerate: 25,
-    });
+    })
 
-    mediaRecorder.ondataavailable{
+    mediaRecorder.ondataavailable
       console.log("data available")
-    }
+    
 
   useEffect(() => {
     // Request camera and microphone access
@@ -39,7 +38,7 @@ export default function Home() {
   // Start recording on button click
  
 
-
+return(
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">Media Recorder Example</h1>
 
@@ -59,6 +58,6 @@ export default function Home() {
         START RECORDING
       </button>
         </div>
-      }
+      )}
   
-  
+}
